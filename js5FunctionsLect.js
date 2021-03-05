@@ -62,160 +62,89 @@
 // 	4. Реалізуйте функцію знаходження факторіала
 
 
-// let num = +prompt(`Write some positive integer number and you'll see factorial of the number.`);
-// let i = 0;
-// let j = 0;
-// let k = 0;
-// let n = 1;
+// let findFactor = (number) => {
+//     let factor = 1;
 
-// let intNum = Number.isInteger(num);
-
-// // check the number if we can use it for factorial calculation  (integer, >= 0)
-
-// function checkNumber() {
-
-//     if (num >= 0 && intNum == true) {
-//         i = num;
-//     } else { false };
-//     return i;
-
+//     while (number > 1) {
+//         factor *= number;
+//         number -= 1;
+//     }
+//     return factor;
 // };
-// console.log(num, "num in checkNumber");
-// console.log(i, "i in checkNumber");
-// console.log(intNum, "check if integer Number");
-
-
-// let factArr = [1];
-// let result = factArr[k];
-
-// function factorNum(checkNumber, result, cancel) {
-
-//     for (i; i > 0; i--) {
-
-//         if (i >= 2) {
-//             factArr[j] = i;
-//         };
-//         if (i < 2) {
-//             factArr[j] = 1;
-//         };
-
-//         console.log(i, "i in cycle factorNum");
-//         console.log(j, "j in cycle factorNum");
-//         ++j;
-//     };
-
-
-//     console.log(factArr, " factArr");
-
-//     for (k = factArr.length; k >= 0; k--) {
-//         if (factArr[k] > 0) {
-//             result *= factArr[k];
-//             console.log(result, "result");
-//         };
-//     };
-//     console.log(i, "i");
-//     console.log(num, "num");
-//     console.log(result, "result");
-//     if (result == undefined || result == NaN) {
-//         cancel = alert("False")
-//     };
-// };
-
-// function showFactorial() {
-//     alert(`factorial of ${num} = ${result}`)
-// };
-
-// function showCancel() {
-//     alert(`${num} is less than 0 or not an integer number!`);
-// };
-
-
-// factorNum(checkNumber, showFactorial, showCancel);
-
-
-// console.log(i, "i");
-// console.log(num, "num");
-// result = i * n;
-// console.log(result, "result");
-// if (result == undefined || result == NaN) {
-//     cancel = alert("False")
-// };
+// console.log(findFactor(4), "function that search factorial of number (4)");
 
 
 
 // 	5.  Напишіть функцію яка отримує години хвилини та секунди і повертає це число в секундах.
 
-let timeCalcStart = true;
+// let timeCalcStart = true;
 
-let hS;
-let mS;
-let resultS = 0;
+// let hS;
+// let mS;
+// let resultS = 0;
 
-do {
+// do {
 
-    timeCalcStart = confirm("Розрахунок часу в секундах. Почати?");
+//     timeCalcStart = confirm("Розрахунок часу в секундах. Почати?");
 
-    if (timeCalcStart === true) {
-        let h = +prompt('Введіть час, години(гг): ', "години"); // hours
-        let m = +prompt('Введіть час, хвилини(хх): ', "хвилини"); // minutes
-        let s = +prompt('Введіть час, секунди(сс): ', "секунди"); // seconds
+//     if (timeCalcStart === true) {
+//         let h = +prompt('Введіть час, години(гг): ', "години"); // hours
+//         let m = +prompt('Введіть час, хвилини(хх): ', "хвилини"); // minutes
+//         let s = +prompt('Введіть час, секунди(сс): ', "секунди"); // seconds
 
 
-        switch (true) {
-            case (h < 24 && h >= 0):
-                hS = h * 60 * 60;
-            case (m < 60 && m >= 0):
-                mS = m * 60;
-            case (s < 60 && s >= 0):
-                resultS = hS + mS + s;
-                alert(`Ваш час (гг:хх:сс) - ${h} : ${m} : ${s} = ${resultS} секунд.`);
-                break;
-            default:
-                alert('Невірні данні!');
-                break;
-        };
-    };
-} while (timeCalcStart === true);
+//         switch (true) {
+//             case (h < 24 && h >= 0):
+//                 hS = h * 60 * 60;
+//             case (m < 60 && m >= 0):
+//                 mS = m * 60;
+//             case (s < 60 && s >= 0):
+//                 resultS = hS + mS + s;
+//                 alert(`Ваш час (гг:хх:сс) - ${h} : ${m} : ${s} = ${resultS} секунд.`);
+//                 break;
+//             default:
+//                 alert('Невірні данні!');
+//                 break;
+//         };
+//     };
+// } while (timeCalcStart === true);
 
 
 // 	6.    Написати функцію , яка приймає секунди, і перетворює їх у години хвилини та секунди у форматі «гг:хх:сс». якщо кількість годин більша за 23.59.59 - вивести повідомлення "Більше одного дня". 
 
-let timeCalcStart = true;
-
-let hS;
-let mS;
-let resultS = 0;
-
-do {
-
-    timeCalcStart = confirm("Перерахунок часу з секунд у формат «гг:хх:сс». Почати?");
-
-    if (timeCalcStart === true) {
-        let timeS = +prompt("Введіть час в секундах (не більше одного дня). Результат показується у форматі «гг:хх:сс».");
-
-        let h = timeS / 86400;
-        let m;
-        let s;
 
 
-        switch (true) {
-            case (h < 24 && h >= 0):
-                hS = h * 60 * 60;
-            case (m < 60 && m >= 0):
-                mS = m * 60;
-            case (s < 60 && s >= 0):
-                resultS = hS + mS + s;
-                alert(`Ваш час (гг:хх:сс) - ${h} : ${m} : ${s} = ${resultS} секунд.`);
-                break;
-            default:
-                alert('Невірні данні!');
-                break;
-        };
-    };
-} while (timeCalcStart === true);
+// const get24hoursFormat = (sec) => {
+//     const hours = Math.floor(sec / 3600); // take hours from seconds (3600 seconds -> 1 hour);
+//     const minutes = Math.floor(sec / 60) - hours * 60; // how much time left for minutes;
+//     const seconds = sec % 60; // how much - left for seconds;
 
+
+//     const timeInString = [
+//         hours.toString().padStart(2, "0"),
+//         minutes.toString().padStart(2, "0"),
+//         seconds.toString().padStart(2, "0"),
+//     ].join(":"); // get string from calculated time (from seconds to hh:mm:ss), make to signs format adding 0 if needed;
+
+
+//     const dayHoursLimit = 24 * 3600;
+
+//     return sec < dayHoursLimit ? timeInString : "Більше одного дня";
+// };
+
+// console.log("Current time: ", get24hoursFormat(25435));
 
 
 
 
 // 	7. 4 відмінності ерров фанкшина від звичайної функції.
+
+// 1) запис коротше
+
+// 2) можна записувати без return та {}
+
+// 4) не мають свого власного this, arguments, super, і new.target
+
+// 5) не може використовуватися як конструктор
+
+// 6) завжди анонімні
